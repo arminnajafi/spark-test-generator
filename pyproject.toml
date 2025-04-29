@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "spark-test-generator"
+version = "0.1.0"
+description = ""
+authors = ["Armin Najafi <armin.najafi@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+openai = "*"
+beautifulsoup4 = "*"
+fastapi = "*"
+uvicorn = "*"
+pytest = "*"
+requests = "*"
+langgraph = "*"
+streamlit = "*"
+boto3 = "*"
+langchain-aws = "*"
+python-dotenv = "*"
+langchain = "*"
+pyspark = "*"
+markdownify = "*"
+langchain-community = "*"
+findspark = "*"
+
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "*"
+ruff = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

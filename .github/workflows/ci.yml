@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: ["main", "dev", "feature/**"]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "poetry"
+
+      - name: Install Poetry
+        # Install the official standalone build; faster than pipx
+        run: curl -sSL https://install.python-poetry.org | python -
+
+      - name: Install dependencies
+        run: |
+          poetry install --no-interaction --all-extras --with dev
+
+      - name: Lint
+        run: poetry run ruff check .
+
+      - name: Run tests
+        env:
+          PYTHONWARNINGS: "ignore"      # keep logs tidy
+        run: poetry run pytest -q

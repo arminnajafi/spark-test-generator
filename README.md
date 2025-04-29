@@ -6,7 +6,7 @@ Apache Spark documentation and automatically generates ready-to-run PyTest modul
 It uses an agent-based architecture to iteratively draft, refine, review, and finalize
 integration tests for Spark APIs, significantly reducing manual effort and improving coverage.
 
----
+
 
 ## 🛠 Core Workflow
 
@@ -20,7 +20,6 @@ integration tests for Spark APIs, significantly reducing manual effort and impro
     - If Agent 2 **approves**, the test is finalized and saved to `output/`.
     - If Agent 2 **rejects**, feedback is sent back to Agent 1 to iterate and improve.
 
----
 
 ## 🚀 Getting Started
 
@@ -55,10 +54,9 @@ poetry run ruff check . --fix
 poetry run ruff format .
 ```
 
----
 
 ## ⚡ License
 
 This project is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
 
----
+

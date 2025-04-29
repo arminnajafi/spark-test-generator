@@ -23,6 +23,7 @@ pyspark = "*"
 markdownify = "*"
 langchain-community = "*"
 findspark = "*"
+poetry-core = "*"
 
 
 
